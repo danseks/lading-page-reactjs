@@ -25,7 +25,7 @@ const netflixSeries = [
 	},
 	{
 		Image:
-			"https://static01.nyt.com/images/2020/12/13/arts/13best-tv-shows-2020-03/merlin_176497056_b55f17fd-232f-4ca9-9dc7-5e1e4cf7b8e7-superJumbo.jpg?quality=90&auto=webp",
+			"https://erizo.org/wp-content/uploads/2020/08/1593075028530-i-may-destroy-you-s1-cc1-1-.jpg",
 		Title: "I May Destroy You",
 		Sinopsis:
 			"Michaela Coel’s revelatory series was to 2020 what Season 2 of “Fleabag” was to 2019: a seamlessly conceived masterwork that is impossible to imagine being written or performed by anyone else.",
@@ -42,15 +42,16 @@ const netflixSeries = [
 	}
 ];
 //create your first component
-const Buble = () => {
+const addCardsInfo = () => {
 	return netflixSeries.map((item, index) => (
-		<Cards
-			key={index}
-			image={item.Image}
-			title={item.Title}
-			description={item.Sinopsis}
-			url={item.URL}
-		/>
+		<Col className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={index}>
+			<Cards
+				image={item.Image}
+				title={item.Title}
+				description={item.Sinopsis}
+				url={item.URL}
+			/>
+		</Col>
 	));
 };
 
@@ -58,9 +59,7 @@ export const Home = () => {
 	return (
 		<Container className="mt-5">
 			<Row>
-				<Col>
-					<CardDeck>{Buble()}</CardDeck>
-				</Col>{" "}
+				<CardDeck>{addCardsInfo()}</CardDeck>
 			</Row>
 		</Container>
 	);

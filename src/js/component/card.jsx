@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { CardDeck, Card, Button, Col } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 export const Cards = props => {
 	return (
@@ -11,9 +11,12 @@ export const Cards = props => {
 				<Card.Text>{props.description}</Card.Text>
 			</Card.Body>
 			<Card.Footer>
-				<Button variant="primary" href={props.url}>
+				<Button
+					variant="primary"
+					className="button-color"
+					href={props.url}>
 					Go to view the Serie
-				</Button>{" "}
+				</Button>
 			</Card.Footer>
 		</Card>
 	);

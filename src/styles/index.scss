@@ -11,3 +11,21 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.card-img-top{
+    height: 10rem;
+}
+
+.button-color{
+    background-color: #F18F01;
+    border-color: #F18F01;
+}
+
+.button-color:hover, button:focus, a:visited{
+    background-color: rgb(204, 124, 3);
+    border-color: #F18F01;
+}
+
+.card{
+    width: 100%;
+}
