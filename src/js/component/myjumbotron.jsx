@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Jumbotron, Button } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
 const jumbotronStyle = {
 	background: "#ADCAD6"
@@ -15,18 +16,20 @@ const buttonStyle = {
 
 export const MyJumbotron = props => {
 	return (
-		<Jumbotron class="jumbotron m-5" style={jumbotronStyle}>
-			<h1 style={textStyle}>{props.title}</h1>
-			<p style={textStyle}>{props.description}</p>
+		<Jumbotron className="jumbotron m-5" style={jumbotronStyle}>
+			<h1 style={textStyle}>{props.titleJumbotron}</h1>
+			<p style={textStyle}>{props.descriptionJumbotron}</p>
 			<p>
-				<Button style={buttonStyle}>{props.buttonLabel}</Button>
+				<Button style={buttonStyle}>
+					{props.buttonLabelJumbotron}
+				</Button>
 			</p>
 		</Jumbotron>
 	);
 };
 
 MyJumbotron.propTypes = {
-	title: PropTypes.string,
-	description: PropTypes.string,
-	buttonLabel: PropTypes.string
+	titleJumbotron: PropTypes.string,
+	descriptionJumbotron: PropTypes.string,
+	buttonLabelJumbotron: PropTypes.string
 };
