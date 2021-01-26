@@ -6,7 +6,8 @@ const footerStyle = {
 	height: "5rem",
 	display: "flex",
 	justifyContent: "center",
-	alignContent: "center"
+	alignContent: "center",
+	marginTop: "2rem"
 };
 const textStyle = {
 	color: "white",
